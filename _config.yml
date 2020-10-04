@@ -1,0 +1,15 @@
+title: Fork Systems
+email: your-email@example.com
+baseurl: ""
+url: "https://45.129.95.4:4000"
+twitter: jekyllrb
+phone: "+442920180265"
+
+permalink: /:categories/:year/:month/:day/:basename/
+
+plugins:
+  - jekyll-seo-tag
+
+collections:
+  services:
+    output: true

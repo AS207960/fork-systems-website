@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="{{ "/favicon.svg" | relative_url }}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="{{ "/assets/css/custom.css" | relative_url }}" rel="stylesheet">
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="{{ site.twitter }}" />
+    <meta name="twitter:title" content="{{ page.title }} | {{ site.title }}" />
+    <meta name="og:title" content="{{ page.title }} | {{ site.title }}" />
+    <meta name="og:url" content="{{ page.url | absolute_url }}" />
+    <meta property="og:site_name" content="{{ site.title }}" />
+    <meta name="og:locale" content="en_GB" />
+    <meta name="og:type" content="website" />
+    {% if page.image %}
+    <meta name="twitter:image" content="{{ page.image }}" />
+    <meta name="og:image" content="{{ page.image }}" />
+    {% else %}
+    <meta name="twitter:image" content="{{ "/assets/img/logo-bg.png" | relative_url }}" />
+    <meta name="og:image" content="{{ "/assets/img/logo-bg.png" | relative_url }}" />
+    {% endif %}
+    {% if page.excerpt %}<meta name="twitter:description" content="{{ page.excerpt | strip_html }}" />
+    <meta name="og:description" content="{{ page.excerpt | strip_html }}" />
+    <meta name="description" content="{{ page.excerpt | strip_html }}"/>{% endif %}
+</head>
+<body class="d-flex flex-column" style="min-height: 100vh">
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="{{ "/" | relative_url }}">
+                <img src="{{ "/assets/img/logo-no-bg.svg" | relative_url }}" height="75" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <span class="navbar-text" id="nav-greeting" style="display: none"></span>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ "/" | relative_url }}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ "/about/" | relative_url }}">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ "/contact/" | relative_url }}">Contact us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="flex-grow-1 d-flex flex-column my-5">
+        {{ content }}
+    </div>
+    <footer class="footer bg-dark text-light mt-3">
+        <div class="container py-4">
+            <div class="row mb-3">
+                <div class="col order-2 order-md-1 col-12 col-md-8">
+                    <p>
+                        <span class="text-muted"><a href="{{ "/contact/" | relative_url }}">Contact Us</a></span>
+                    </p>
+                </div>
+                <div class="col order-1 order-md-2 mb-3 mb-md-0 col-12 col-md-4">
+                    <a href="https://twitter.com/{{ site.twitter }}" class="no-hover">
+                        <img src="{{ "/assets/img/Twitter_Social_Icon_Rounded_Square_Color.svg" | relative_url }}" height="50" alt="Our Twitter">
+                    </a>
+                </div>
+            </div>
+            <p class="text-center">
+                Copyright {{ site.title }} &copy; {{ 'now' | date: "%Y" }}
+            </p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="{{ "/assets/js/bootstrap.min.js" | relative_url }}"></script>
+</body>
+</html>
