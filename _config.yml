@@ -1,7 +1,7 @@
 title: Fork Systems
 email: your-email@example.com
-baseurl: "/fork-systems-website"
-url: "https://45.129.95.4:4000"
+baseurl: "/"
+url: "https://forksystems.net"
 twitter: jekyllrb
 phone: "+442920180265"
 
