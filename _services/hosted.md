@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Hosted Infrastructure
-image: https://picsum.photos/300/250?3
+image: https://s3.wasabisys.com/forksystems.net/servers1.png
 excerpt: >-
   Chislic spare ribs tail filet mignon pancetta boudin burgdoggen tri-tip pastrami t-bone rump
   chicken meatloaf kielbasa strip steak. Prosciutto spare ribs pancetta swine, beef ribs
